@@ -1,0 +1,14 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+pydantic[email]
+psycopg2-binary
+python-dotenv
+fastapi-mail
+APScheduler
+httpx
+tzdata
+argon2-cffi==25.1.0
+Pillow==13.0.0
+reportlab==4.4.9
+vosk==0.3.45

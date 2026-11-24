@@ -1,0 +1,27 @@
+{
+	log {
+		exclude http.log.access http.log.error
+	}
+}
+
+{$ODONTO_API_HOST} {
+	reverse_proxy 127.0.0.1:8000
+}
+
+{$ODONTO_WEB_HOST} {
+	root * "{$ODONTO_WEB_ROOT}"
+	encode zstd gzip
+	header {
+		Strict-Transport-Security "max-age=31536000"
+		Referrer-Policy "no-referrer"
+		X-Content-Type-Options "nosniff"
+	}
+	@assets path /react/* /css/* /assets/*
+	handle @assets {
+		file_server
+	}
+	handle {
+		try_files {path} /index.html
+		file_server
+	}
+}

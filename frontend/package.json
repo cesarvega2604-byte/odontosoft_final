@@ -1,0 +1,18 @@
+{
+  "name": "odontosoft-web",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "build:desktop": "node build.mjs --desktop",
+    "dev": "node build.mjs --serve"
+  },
+  "dependencies": {
+    "html2pdf.js": "0.14.0",
+    "react": "19.2.3",
+    "react-dom": "19.2.3"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.12"
+  }
+}

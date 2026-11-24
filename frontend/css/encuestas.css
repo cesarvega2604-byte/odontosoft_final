@@ -1,0 +1,23 @@
+.encuesta-estrellas { border: 0; margin: 0 0 20px; padding: 0; min-width: 0; }
+.encuesta-estrellas legend, .encuesta-campo { color: #172033; font-weight: 700; font-size: .9rem; }
+.encuesta-estrellas > div { display: flex; gap: 5px; flex-wrap: wrap; margin-top: 10px; }
+.encuesta-estrellas label { position: relative; line-height: 1; }
+.encuesta-estrellas input { position: absolute; opacity: 0; }
+.encuesta-estrellas label > span { display: block; font-size: 2.1rem; color: #9caabd; cursor: pointer; padding: 6px; }
+.encuesta-estrellas .seleccionada > span, .calificacion { color: #a64b00; }
+.encuesta-estrellas input:focus-visible + span { outline: 2px solid #0369a1; border-radius: 6px; }
+.encuesta-form textarea { display: block; width: 100%; border: 1px solid #bac9d7; border-radius: 8px; margin: 8px 0 14px; padding: 12px; font: inherit; resize: vertical; }
+.encuesta-consentimiento { display: flex; align-items: flex-start; gap: 9px; font-size: .85rem; color: #26364c; margin-bottom: 8px; }
+.encuesta-consentimiento input { margin-top: 3px; }
+.encuesta-nota, .encuesta-error { font-size: .8rem; margin-bottom: 14px; }
+.encuesta-nota { color: #475569; }
+.encuesta-error { color: #a51d2a; }
+.encuesta-respuesta { margin: 22px 0; color: #26364c; }
+.opiniones { background: #f3f8fc; }
+.opiniones-grid { max-width: 1080px; margin: auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 18px; }
+.opiniones-grid article { padding: 19px; border: 1px solid #dce8ef; border-radius: 14px; background: white; }
+.calificacion { font-size: 1.18rem; letter-spacing: .12em; margin-bottom: 8px; }
+.calificacion > span > span { color: #a4aebd; }
+.opiniones-grid p { color: #26364c; line-height: 1.55; white-space: pre-line; overflow-wrap: anywhere; }
+.opiniones-aviso, .opiniones-mas { text-align: center; margin: 18px 0 0; color: #475569; }
+.opiniones-mas button { padding: 10px 16px; cursor: pointer; font: inherit; font-weight: 700; color: #075985; background: #fff; border: 1px solid #b9d7eb; border-radius: 8px; }

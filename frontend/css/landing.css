@@ -1,0 +1,877 @@
+/* =========================================================
+   INDEX.CSS - Landing page OdontoSoft
+   ========================================================= */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 82px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* ---------- HEADER ---------- */
+.header {
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(12px);
+  padding: 13px 5%;
+  min-height: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 3px 18px rgba(15, 23, 42, 0.08);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  text-decoration: none;
+}
+
+.logo-icon {
+  font-size: 37px;
+  color: var(--primary-color);
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--primary-color);
+}
+
+.logo h1 span {
+  color: var(--text-main);
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.menu a {
+  text-decoration: none;
+  color: var(--text-main);
+  font-weight: 600;
+  font-size: 0.88rem;
+  transition: 0.25s ease;
+  position: relative;
+}
+
+.menu a:not(.menu-login):not(.menu-register)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  width: 0;
+  height: 2px;
+  background: var(--primary-color);
+  transition: width 0.25s ease;
+}
+
+.menu a:hover {
+  color: var(--primary-color);
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
+
+.menu-login,
+.menu-register {
+  padding: 9px 15px;
+  border-radius: 8px;
+}
+
+.menu-login {
+  border: 1px solid #bae6fd;
+  color: #0369a1 !important;
+  background: #f0f9ff;
+}
+
+.menu-register {
+  background: var(--primary-color);
+  color: #fff !important;
+  box-shadow: 0 5px 14px rgba(2, 132, 199, 0.2);
+}
+
+.menu-register:hover {
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+/* ---------- HERO ---------- */
+.hero {
+  min-height: 650px;
+  margin-top: 72px;
+  padding: 60px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  isolation: isolate;
+  background: url("../assets/imagen_odonto.png") center/cover no-repeat;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(15, 23, 42, 0.78), rgba(15, 23, 42, 0.34));
+  z-index: -1;
+}
+
+.hero-content {
+  width: min(760px, 100%);
+  margin-right: auto;
+  margin-left: 5%;
+  color: #fff;
+  animation: fadeInUp 0.75s ease both;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 13px;
+  border-radius: 30px;
+  background: rgba(255,255,255,0.14);
+  border: 1px solid rgba(255,255,255,0.25);
+  font-size: 0.82rem;
+  margin-bottom: 20px;
+}
+
+.hero-badge .material-symbols-outlined {
+  font-size: 18px;
+}
+
+.hero-content h2 {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1.1;
+  font-weight: 800;
+  margin-bottom: 20px;
+  max-width: 760px;
+}
+
+.hero-content h2 span {
+  color: #7dd3fc;
+}
+
+.hero-content p {
+  max-width: 690px;
+  color: #e2e8f0;
+  line-height: 1.85;
+  font-size: 1.02rem;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 13px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 13px 24px;
+  border-radius: 9px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.3s ease;
+  box-shadow: 0 9px 25px rgba(2, 132, 199, 0.25);
+}
+
+.btn:hover {
+  background: var(--primary-hover);
+  transform: translateY(-3px);
+}
+
+.btn .material-symbols-outlined {
+  font-size: 20px;
+}
+
+.btn-outline {
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.55);
+  box-shadow: none;
+}
+
+.btn-outline:hover {
+  background: #fff;
+  color: var(--primary-color);
+}
+
+.hero-mini-info {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+  margin-top: 32px;
+  color: #e2e8f0;
+  font-size: 0.83rem;
+}
+
+.hero-mini-info span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.hero-mini-info .material-symbols-outlined {
+  font-size: 18px;
+  color: #7dd3fc;
+}
+
+/* ---------- SECCIONES ---------- */
+.seccion {
+  width: min(1180px, 90%);
+  margin: 0 auto;
+  padding: 90px 0;
+}
+
+.seccion-titulo {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 42px;
+}
+
+.seccion-etiqueta {
+  display: inline-block;
+  color: var(--primary-color);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  margin-bottom: 9px;
+}
+
+.seccion-titulo h2 {
+  color: var(--text-main);
+  font-size: clamp(1.75rem, 4vw, 2.55rem);
+  line-height: 1.2;
+  margin-bottom: 13px;
+}
+
+.seccion-titulo p {
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+/* ---------- CARRUSEL ---------- */
+.carrusel-seccion {
+  padding-bottom: 55px;
+}
+
+.carousel {
+  position: relative;
+  max-width: 1080px;
+  margin: auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 55px rgba(15, 23, 42, 0.14);
+  background: #0f172a;
+}
+
+.carousel-track {
+  position: relative;
+  height: 500px;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.55s ease, visibility 0.55s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(15,23,42,0.86), rgba(15,23,42,0.04) 65%);
+}
+
+.slide-info {
+  position: absolute;
+  z-index: 2;
+  left: 42px;
+  right: 42px;
+  bottom: 35px;
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  color: #fff;
+}
+
+.slide-info > span {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #7dd3fc;
+  padding-top: 4px;
+}
+
+.slide-info h3 {
+  font-size: 1.65rem;
+  margin-bottom: 5px;
+}
+
+.slide-info p {
+  color: #dbeafe;
+  font-size: 0.92rem;
+  margin: 0;
+}
+
+.carousel-btn {
+  position: absolute;
+  z-index: 4;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.45);
+  background: rgba(15,23,42,0.48);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.carousel-btn:hover {
+  background: var(--primary-color);
+  transform: translateY(-50%) scale(1.05);
+}
+
+.carousel-btn.prev { left: 18px; }
+.carousel-btn.next { right: 18px; }
+
+.carousel-dots {
+  position: absolute;
+  z-index: 5;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 7px;
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 0;
+  background: rgba(255,255,255,0.48);
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.dot.active {
+  width: 27px;
+  border-radius: 10px;
+  background: #fff;
+}
+
+/* ---------- SERVICIOS ---------- */
+.servicios-seccion {
+  padding-top: 75px;
+  padding-bottom: 85px;
+}
+
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.servicio-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 28px 23px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.servicio-card:hover {
+  transform: translateY(-6px);
+  border-color: #7dd3fc;
+  box-shadow: 0 15px 32px rgba(15, 23, 42, 0.11);
+}
+
+.servicio-icon {
+  width: 62px;
+  height: 62px;
+  margin: 0 auto 18px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  background: #e0f2fe;
+  color: #0284c7;
+}
+
+.servicio-icon .material-symbols-outlined {
+  font-size: 31px;
+}
+
+.servicio-card h3 {
+  color: var(--text-main);
+  font-size: 1.08rem;
+  margin-bottom: 10px;
+}
+
+.servicio-card p {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ---------- GRÁFICA ---------- */
+.grafica-seccion {
+  max-width: 1220px;
+  padding-top: 45px;
+}
+
+.grafica-contenedor {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 45px;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 22px;
+  padding: 48px;
+  box-shadow: 0 12px 35px rgba(15,23,42,0.06);
+}
+
+.grafica-texto h2 {
+  font-size: clamp(1.7rem, 3vw, 2.35rem);
+  line-height: 1.25;
+  margin: 7px 0 15px;
+}
+
+.grafica-texto > p {
+  color: var(--text-muted);
+  line-height: 1.8;
+  font-size: 0.92rem;
+}
+
+.grafica-puntos {
+  margin-top: 22px;
+  display: grid;
+  gap: 10px;
+}
+
+.grafica-puntos div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #334155;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.grafica-puntos .material-symbols-outlined {
+  color: #16a34a;
+  font-size: 19px;
+}
+
+.grafica-card {
+  background: #f8fafc;
+  border-radius: 17px;
+  padding: 30px;
+  border: 1px solid #e2e8f0;
+}
+
+.grafica-card h3 {
+  margin-bottom: 25px;
+  font-size: 1.05rem;
+}
+
+.bar-item {
+  margin-bottom: 22px;
+}
+
+.bar-item:last-child {
+  margin-bottom: 0;
+}
+
+.bar-item > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+  font-size: 0.82rem;
+}
+
+.bar-item strong {
+  color: var(--primary-color);
+}
+
+.bar {
+  height: 10px;
+  border-radius: 20px;
+  background: #e2e8f0;
+  overflow: hidden;
+}
+
+.bar span {
+  display: block;
+  height: 100%;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #0284c7, #38bdf8);
+}
+
+/* ---------- UBICACIÓN ---------- */
+.ubicacion-seccion {
+  max-width: 1220px;
+  padding-top: 70px;
+  padding-bottom: 90px;
+}
+
+.ubicacion-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 25px;
+}
+
+.ubicacion-info {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 31px;
+  box-shadow: 0 7px 25px rgba(15,23,42,0.05);
+}
+
+.contacto-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 0;
+  border-bottom: 1px solid #eef2f7;
+}
+
+.contacto-item:last-of-type {
+  border-bottom: 0;
+}
+
+.contacto-icon {
+  min-width: 43px;
+  height: 43px;
+  border-radius: 11px;
+  background: #e0f2fe;
+  color: var(--primary-color);
+  display: grid;
+  place-items: center;
+}
+
+.contacto-item h3 {
+  font-size: 0.93rem;
+  margin-bottom: 3px;
+}
+
+.contacto-item p {
+  color: var(--text-muted);
+  font-size: 0.84rem;
+  line-height: 1.6;
+}
+
+.map-btn {
+  margin-top: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  width: 100%;
+  padding: 12px;
+  border-radius: 9px;
+  background: var(--primary-color);
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.86rem;
+  font-weight: 700;
+  transition: 0.25s ease;
+}
+
+.map-btn:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.mapa {
+  min-height: 390px;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 7px 25px rgba(15,23,42,0.05);
+  background: #e2e8f0;
+}
+
+.mapa iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 390px;
+  border: 0;
+}
+
+/* ---------- FOOTER COMPLEMENTOS ---------- */
+.footer-description {
+  margin-top: 10px;
+  color: #cbd5e1;
+  font-size: 0.86rem;
+  line-height: 1.8;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1000px) {
+  .menu {
+    gap: 12px;
+  }
+
+  .menu a {
+    font-size: 0.78rem;
+  }
+
+  .funciones-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grafica-contenedor,
+  .ubicacion-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 760px) {
+  .header {
+    min-height: 65px;
+    padding: 10px 16px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .logo h1 {
+    font-size: 1.45rem;
+  }
+
+  .logo-icon {
+    font-size: 31px;
+  }
+
+  .menu {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 7px 13px;
+  }
+
+  .menu a {
+    font-size: 0.73rem;
+  }
+
+  .menu-login,
+  .menu-register {
+    padding: 7px 10px;
+  }
+
+  .hero {
+    margin-top: 103px;
+    min-height: 570px;
+    padding: 45px 20px;
+  }
+
+  .hero-content {
+    margin: 0;
+  }
+
+  .hero-content h2 {
+    font-size: 2.25rem;
+  }
+
+  .hero-content p {
+    font-size: 0.91rem;
+  }
+
+  .hero-mini-info {
+    gap: 10px 15px;
+  }
+
+  .seccion {
+    width: 92%;
+    padding: 65px 0;
+  }
+
+  .carousel-track {
+    height: 430px;
+  }
+
+  .slide-info {
+    left: 25px;
+    right: 25px;
+    bottom: 35px;
+  }
+
+  .slide-info h3 {
+    font-size: 1.25rem;
+  }
+
+  .slide-info p {
+    font-size: 0.8rem;
+  }
+
+  .funciones-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .grafica-contenedor {
+    padding: 27px 22px;
+    gap: 28px;
+  }
+
+
+  .video-placeholder {
+    min-height: 360px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu {
+    gap: 5px 8px;
+  }
+
+  .menu a {
+    font-size: 0.68rem;
+  }
+
+  .hero {
+    margin-top: 112px;
+    min-height: 540px;
+  }
+
+  .hero-content h2 {
+    font-size: 1.9rem;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+  }
+
+  .hero-mini-info {
+    display: grid;
+    gap: 8px;
+  }
+
+  .carousel-track {
+    height: 390px;
+  }
+
+  .carousel-btn {
+    width: 38px;
+    height: 38px;
+  }
+
+  .slide-info {
+    left: 19px;
+    right: 19px;
+  }
+
+  .slide-info > span {
+    display: none;
+  }
+
+  .grafica-card {
+    padding: 22px 18px;
+  }
+
+  .ubicacion-info {
+    padding: 22px;
+  }
+}
+
+
+/* INTRODUCCIÓN DE ODONTOSOFT */
+.intro-odontosoft {
+    width: min(1100px, 92%);
+    margin: 40px auto 10px;
+    padding: 30px 34px;
+    background: #ffffff;
+    border-radius: 18px;
+    border: 1px solid #e7edf3;
+    box-shadow: 0 8px 24px rgba(20, 40, 70, 0.07);
+    text-align: center;
+}
+
+.intro-odontosoft .seccion-etiqueta {
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.intro-odontosoft h2 {
+    margin: 4px 0 10px;
+    color: #132238;
+    font-size: 28px;
+}
+
+.intro-odontosoft p {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #5f6f82;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+@media (max-width: 700px) {
+    .intro-odontosoft {
+        padding: 24px 20px;
+    }
+
+    .intro-odontosoft h2 {
+        font-size: 23px;
+    }
+}
+
+/* ---------- RESPONSIVE SERVICIOS ---------- */
+@media (max-width: 1000px) {
+  .servicios-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .servicios-grid {
+    grid-template-columns: 1fr;
+  }
+}

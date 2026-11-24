@@ -1,0 +1,103 @@
+/* ============================================
+   PANEL_CLIENTE.CSS - Estilos específicos del Dashboard Cliente
+   ============================================ */
+
+.btn-perfil-header {
+    background: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    font-family: 'Poppins', 'Segoe UI', system-ui, sans-serif;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 2px 8px rgba(2, 132, 199, 0.2);
+}
+.btn-perfil-header:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(2, 132, 199, 0.3);
+}
+
+.tabs {
+    display: flex;
+    gap: 0;
+    margin-bottom: 25px;
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+}
+.tab-btn {
+    padding: 14px 28px;
+    background: transparent;
+    border: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', 'Segoe UI', system-ui, sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 3px solid transparent;
+    flex: 1;
+    justify-content: center;
+}
+.tab-btn .material-symbols-outlined {
+    color: var(--text-muted);
+    transition: color 0.3s ease;
+}
+.tab-btn:hover {
+    background: #f8fafc;
+    color: var(--text-main);
+}
+.tab-btn:hover .material-symbols-outlined {
+    color: var(--primary-color);
+}
+.tab-btn.active {
+    background: #ffffff;
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+}
+.tab-btn.active .material-symbols-outlined {
+    color: var(--primary-color);
+}
+.tab-content {
+    display: none;
+    padding-top: 10px;
+}
+.tab-content.active {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .tabs {
+        flex-direction: column;
+        border-radius: 12px;
+    }
+    .tab-btn {
+        border-bottom: 1px solid #e2e8f0;
+        border-left: 3px solid transparent;
+        padding: 12px 20px;
+        justify-content: center;
+    }
+    .tab-btn.active {
+        border-bottom: 1px solid #e2e8f0;
+        border-left: 3px solid var(--primary-color);
+    }
+}.reserva-banner{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:24px;border-radius:15px;background:linear-gradient(120deg,#f0f9ff,#fff);border:1px solid #bae6fd;margin-bottom:22px}.reserva-banner h3{font-size:1.2rem;color:#0f3f5f;margin:6px 0}.reserva-banner p{font-size:.83rem;color:#64748b}.reserva-disponibilidad{padding:14px;border:1px solid #dce7ef;background:#f8fbfd;border-radius:10px;font-size:.75rem;margin-bottom:8px}.reserva-disponibilidad>strong{color:#0f3f5f}.reserva-horas{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}.reserva-horas button{background:#fff;color:#0369a1;border:1px solid #cbdde9;padding:7px 9px;border-radius:6px;font:inherit;cursor:pointer}.reserva-horas button:hover,.reserva-horas button.active{background:#0284c7;color:#fff;border-color:#0284c7}#modalReserva{z-index:600}#modalReserva .agenda-dialog h3{margin:0}#modalReserva .agenda-dialog p{line-height:1.6}.content-header{flex-wrap:wrap}.content-header>div:first-child{flex:1}.table-container{overflow-x:auto!important}.table-container table{min-width:520px}@media(max-width:600px){.reserva-banner{flex-direction:column;align-items:flex-start}.reserva-banner .agenda-btn{width:100%}}
+.reserva-alternativa {
+  margin-top: 8px;
+}
+
+.reserva-alternativa p {
+  margin: 4px 0 8px;
+}

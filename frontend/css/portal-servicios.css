@@ -1,0 +1,167 @@
+.odonto-workspace {
+  --od-ink: #132b39;
+  --od-muted: #4a6473;
+  --od-edge: #dce5e9;
+  --od-accent: #086378;
+  width: min(1100px, calc(100% - 40px));
+  margin: 34px auto 64px;
+  color: var(--od-ink);
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+.odonto-workspace :is(h1, h2, h3, p) { margin: 0; }
+.odonto-workspace h1 { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.15; }
+.odonto-workspace h2 { font-size: 1.25rem; }
+.odonto-workspace h3 { font-size: 1rem; }
+.odonto-workspace :is(button, a, input, textarea, select):focus-visible {
+  outline: 3px solid #0a778c;
+  outline-offset: 3px;
+}
+
+.odonto-back {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  margin-bottom: 18px;
+  color: var(--od-accent);
+  text-decoration: none;
+  font-weight: 650;
+}
+
+.odonto-feature-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: clamp(20px, 4vw, 36px);
+  margin-bottom: 18px;
+  border: 1px solid #cce2e7;
+  border-radius: 20px;
+  background: #eaf5f7;
+}
+.odonto-feature-header p { margin-top: 8px; color: var(--od-muted); }
+
+.odonto-card, .odonto-summary {
+  border: 1px solid var(--od-edge);
+  background: #fff;
+  border-radius: 16px;
+  margin-bottom: 16px;
+  padding: clamp(16px, 3vw, 26px);
+}
+.odonto-card h2 { margin-bottom: 14px; }
+.odonto-card .odonto-muted { margin-top: 12px; color: var(--od-muted); }
+.odonto-section-heading, .odonto-actions, .odonto-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.odonto-section-heading { margin-bottom: 14px; }
+.odonto-section-heading h2 { margin: 0; }
+.odonto-section-heading small { color: var(--od-muted); }
+.odonto-actions { justify-content: flex-start; }
+.odonto-summary { justify-content: flex-start; gap: 20px 48px; }
+.odonto-summary > div { display: grid; gap: 5px; }
+.odonto-summary small { color: var(--od-muted); }
+.odonto-summary progress { width: min(240px, 100%); height: 10px; accent-color: var(--od-accent); }
+
+.odonto-primary, .odonto-secondary, .odonto-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 42px;
+  padding: 8px 14px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  font: inherit;
+  font-weight: 650;
+  cursor: pointer;
+}
+.odonto-primary { color: #fff; background: var(--od-accent); }
+.odonto-secondary { color: var(--od-ink); background: #f6f9fa; border-color: var(--od-edge); }
+.odonto-link { color: var(--od-accent); padding-inline: 4px; background: transparent; text-decoration: underline; }
+.odonto-workspace button:disabled { opacity: .55; cursor: not-allowed; }
+.odonto-feedback {
+  padding: 12px 16px;
+  margin-bottom: 16px !important;
+  border-radius: 10px;
+  background: #e2f5eb;
+  color: #165839;
+}
+.odonto-feedback.error { background: #fdf0ee; color: #962d26; }
+
+.odonto-map-scroll, .odonto-table-scroll { overflow-x: auto; padding: 4px; margin: -4px; }
+.odonto-arch { min-width: 690px; }
+.odonto-arch + .odonto-arch { margin-top: 12px; }
+.odonto-arch h3 { color: var(--od-muted); margin-bottom: 7px; font-size: .85rem; }
+.odonto-tooth-row { display: grid; grid-template-columns: repeat(16, minmax(36px, 1fr)); gap: 5px; }
+.odonto-tooth-row button {
+  min-height: 44px;
+  color: var(--od-ink);
+  background: #f3f6f7;
+  border: 1px solid var(--od-edge);
+  border-radius: 12px 12px 8px 8px;
+  font: inherit;
+  font-weight: 650;
+  cursor: pointer;
+}
+.odonto-tooth-row button:nth-child(8) { margin-right: 5px; }
+.odonto-tooth-row button[aria-pressed=true] { box-shadow: inset 0 0 0 2px var(--od-accent); }
+.odonto-legend { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.odonto-status {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  padding: 4px 9px;
+  border-radius: 999px;
+  font-size: .82rem;
+  font-weight: 650;
+}
+.odonto-workspace [data-tone="pendiente"] { color: #783e0d; background: #fdf1d7; }
+.odonto-workspace [data-tone="en_curso"] { color: #125778; background: #dff1fa; }
+.odonto-workspace [data-tone="completada"] { color: #165839; background: #def3e8; }
+
+.odonto-phase-list { padding: 0; margin: 0; list-style: none; }
+.odonto-phase-list li { display: flex; align-items: center; flex-wrap: wrap; gap: 10px 14px; padding: 13px 0; border-top: 1px solid var(--od-edge); }
+.odonto-phase-main { flex: 1 1 210px; min-width: 0; overflow-wrap: anywhere; }
+.odonto-phase-main small { color: var(--od-muted); }
+.odonto-phase-main p { margin-top: 4px; white-space: pre-line; }
+
+.odonto-editor, .odonto-columns { display: grid; gap: 12px; }
+.odonto-editor h2 { margin: 0; }
+.odonto-columns { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.odonto-inline-form { display: flex; align-items: end; flex-wrap: wrap; gap: 12px; }
+.odonto-inline-form > label { flex: 1 1 200px; }
+.odonto-payment { flex-basis: 100%; background: #f0f7f8; padding: 12px; border-radius: 10px; }
+.odonto-filter { max-width: 500px; }
+.odonto-workspace label { display: grid; gap: 5px; font-weight: 650; }
+.odonto-workspace label :is(input, select, textarea) {
+  width: 100%;
+  min-height: 42px;
+  border: 1px solid #aabfc9;
+  border-radius: 8px;
+  color: var(--od-ink);
+  background: #fff;
+  padding: 8px 10px;
+  font: inherit;
+}
+.odonto-workspace label.odonto-checkbox { display: inline-flex; align-items: center; gap: 8px; }
+.odonto-checkbox input[type=checkbox] { width: 18px; min-height: 18px; accent-color: var(--od-accent); }
+.odonto-table { width: 100%; min-width: 670px; border-collapse: collapse; text-align: left; }
+.odonto-table :is(th, td) { padding: 10px; border-bottom: 1px solid var(--od-edge); vertical-align: middle; }
+.odonto-table thead { background: #f0f6f8; }
+.odonto-table td small { display: block; color: var(--od-muted); margin-top: 4px; }
+.odonto-table .odonto-link { white-space: nowrap; }
+
+@media (max-width: 780px) {
+  .odonto-arch { min-width: 0; }
+  .odonto-tooth-row { grid-template-columns: repeat(8, minmax(0, 1fr)); }
+  .odonto-tooth-row button:nth-child(8) { margin-right: 0; }
+}
+
+@media (max-width: 590px) {
+  .odonto-workspace { width: calc(100% - 24px); margin-top: 18px; }
+  .odonto-feature-header { align-items: flex-start; flex-direction: column; }
+  .odonto-columns { grid-template-columns: 1fr; }
+}

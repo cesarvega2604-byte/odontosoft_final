@@ -1,0 +1,14 @@
+{
+  "name": "OdontoSoft",
+  "short_name": "OdontoSoft",
+  "id": "/",
+  "start_url": "/login",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#075985",
+  "background_color": "#ffffff",
+  "icons": [
+    { "src": "/assets/odontosoft-icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/odontosoft-icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
